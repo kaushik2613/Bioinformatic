@@ -1,0 +1,42 @@
+1. Overview and Significance
+This project tackles challenge of antimicrobial resistance by testing whether whole-genome sequence patterns
+can predict resistance without relying solely on known AMR genes. It connects to key topics including k-mer
+genome representation and ML classification for rapid AMR prediction.
+2. Data Description
+Publicly available bacterial genomes were obtained from BV-BRC/PATRIC, using whole-genome FASTA
+sequence files and antibiotic resistance CSV/TSV phenotype labels. After downloading through the PATRIC
+interface, we filtered out isolates with missing metadata, standardized genome IDs, and extracted k-mer
+frequency features from each cleaned genome.
+3. Methods / Analysis Plan
+We will extract k-mer frequency features from whole-genome FASTA files using Python/Biopython and train
+machine-learning classifiers to predict Resistant vs Sensitive phenotypes. Model performance will be evaluated
+using accuracy, F1-score, and ROC-AUC, and key predictive k-mers will be interpreted using feature importance
+or SHAP values.
+4. Expected Deliverables
+We will produce a Jupyter notebook/Python script that performs k-mer extraction, ML model training, and
+evaluation, along with figures such as ROC curves and feature-importance plots. A short report will summarize
+methods, results, and biological interpretation, and all code and data-processing steps will be organized in a
+reproducible GitHub repository.
+5. Anticipated Challenges & Mitigation
+A potential obstacle is the large size of FASTA genomes; we will address this by using smaller k-mers and
+subsampling isolates if necessary. Another challenge is class imbalance in resistance labels, which we will
+mitigate using stratified splits and class-weighted ML models.
+6. Timeline (3-Week Plan)
+Week
+Tasks / Milestones
+1
+Download FASTA genomes and labels, preprocess data, and extract k-mer features.
+2
+Train and tune ML models (XGBoost/SVM) and evaluate performance (ROC-AUC, F1).
+3
+Create visualizations, interpret top k-mers, and finalize the report and repository.
+7. Evaluation / Success Criteria
+Success will be measured by completing a fully reproducible workflow that extracts k-mers, trains ML models, and
+produces interpretable outputs. The project is successful if the model achieves ROC-AUC ≥ 0.75 and its top k-`
+match known or biologically plausible AMR-related regions.
+8. AI Use & Reproducibility Statement (required)
+ChatGPT was used only to assist in creating the 1-page project summary by helping condense detailed project
+information, suggesting clear structure and flow, and generating ideas for organizing sections logically within the
+page limit. AI outputs will be verified manually by checking datasets, rerunning code, and confirming biological
+accuracy with BV-BRC/CARD. All prompts, AI outputs, and validated revisions will be recorded in a GitHub
+ai_usage.md file for full transparency and reproducibility.
