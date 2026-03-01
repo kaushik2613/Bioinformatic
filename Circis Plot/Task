@@ -1,0 +1,10 @@
+: Upload a circos plot illustrating the positions of E. coli variants.
+
+Use the Ecoli_variant_circos_plot.ipynb Colab notebook to generate the circos plot and output as a PNG file.
+
+You should not need to modify the contents of any cell except the last one.
+
+Running the first code cell will prompt you to upload your VCF output file from the jgb_bowtie_trimmed_RM.sh SLURM script.
+
+FOLLOW THE INSTRUCTIONS ABOVE THE LAST CELL TO COMPLETE THE ASSIGNMENT.
+
